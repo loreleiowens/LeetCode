@@ -18,7 +18,7 @@ class Solution:
         for r in range(len(s)):
             while s[r] in charSet: 
                 charSet.remove(s[l]) # Remove duplicate & push sliding window over one
-                l += 1
+                l += 1 # add 1 to prevent maxLen increasing
 
             charSet.add(s[r]) # Checks if r is in charSet - adds back in duplicate value as sliding window updated to exclude
             maxLen = max(maxLen, r - l + 1) # Updates maxLen everytime unique value appears
